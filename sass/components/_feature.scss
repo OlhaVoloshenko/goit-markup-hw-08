@@ -1,0 +1,57 @@
+/*feature*/
+.feature {
+    @extend %section;
+}
+.feature__box {
+    @extend %container;
+}
+.feature__list {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+}
+.feature__item {
+    width: calc((100% - 90px) / 4);
+    max-width: 270px;
+
+    .feature__list & + & {
+        margin-left: 30px;
+    }
+
+    &::before {
+    display: block;
+    content: '';
+    height: 120px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $background-color-portfolio;
+    }
+}
+
+.feature__item.icon-antenna::before {
+    background-image: url(../images/1/antenna.svg);
+}
+.feature__item.icon-clock::before {
+    background-image: url(../images/1/clock1.svg);
+}
+.feature__item.icon-diagram::before {
+    background-image: url(../images/1/diagram.svg);
+}
+.feature__item.icon-astronaut::before {
+    background-image: url(../images/1/astronaut.svg);
+}
+.featute__subtitle {
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-text-color;
+}
+.feature__text {
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $page-text-color;
+}

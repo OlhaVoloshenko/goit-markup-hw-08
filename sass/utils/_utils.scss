@@ -1,0 +1,76 @@
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    display: inline-block;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    background-color: $background-color;
+    color: $page-text-color;
+}
+
+/*Утіліти*/
+%list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+%section {
+    padding: 94px 0;
+}
+%container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*hide title*/
+.section-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+/*підсвічування активної сторінки*/
+.header-nav--current {
+    color: $accent-text-color;
+}
+.header-nav {
+    &--current::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 32px;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+
+    background-color: $accent-text-color;
+    border-radius: 2px;
+    }
+}

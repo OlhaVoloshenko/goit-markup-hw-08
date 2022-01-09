@@ -1,0 +1,117 @@
+/*team*/
+.team {
+    @extend %section;
+    background-color: $background-color-portfolio;
+}
+.team-box {
+    @extend %container;
+}
+.team-box__title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.16;
+    
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+}
+.team-member__subtitle {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+/* identical to box height */
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+}
+.team-member__position {   
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.18;
+/* identical to box height */
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $page-text-color;
+
+    margin-bottom: 16px;
+}
+.team-list__item > .team-member__box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.team-list {
+    @extend %list;
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.team-list>.team-list__item {
+    @extend %list;
+    width: calc((100% - 90px) / 4);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $background-color;
+}
+.team-list__item:not(:first-child) {
+    margin-left: 30px;
+}
+.team-list__picture {
+    max-width: 100%;
+    height: auto;
+}
+.social-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color;
+}
+.social-menu__link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    transition-property: background-color;
+    transition-duration: $transdur;
+    transition-timing-function: $transtfunction;
+}
+.social-menu__link:hover,
+.social-menu__link:focus {
+    background-color: $accent-text-color;
+}
+.social-menu__icon {
+    width: 20px;
+    height: 20px;
+    fill: $color-icons-items;
+
+    transition-property: fill;
+    transition-duration: $transdur;
+    transition-timing-function: $transtfunction;
+}
+.instagram,
+.twitter,
+.facebook,
+.linkedin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.instagram:hover .social-menu__icon,
+.instagram:focus .social-menu__icon {
+    fill: $background-color;
+}
+.twitter:hover .social-menu__icon,
+.twitter:focus .social-menu__icon {
+    fill: $background-color;
+}
+.facebook:hover .social-menu__icon,
+.facebook:focus .social-menu__icon {
+    fill: $background-color;
+}
+.linkedin:hover .social-menu__icon,
+.linkedin:focus .social-menu__icon {
+    fill: $background-color;
+}

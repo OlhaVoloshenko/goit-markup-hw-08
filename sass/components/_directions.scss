@@ -1,0 +1,53 @@
+/*directions*/
+.directions {
+    padding-top: 0;
+    @extend %section;
+    
+}
+.directions-box {
+    @extend %container;
+}
+.directions__title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+}
+.directions-list {
+    @extend %list;
+    display: flex;
+    align-items: center;
+}
+.directions-list__picture {
+    height: 294px;
+}
+.directions-list__item {
+    position: relative;
+
+    &:not(:first-child) {
+        margin-left: 30px;
+  }
+}
+.directions-list__text {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $background-color;
+    background-color: rgba(47, 48, 58, 0.8);
+
+    padding-top: 27px;
+    padding-bottom: 27px;
+}

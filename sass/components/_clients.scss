@@ -1,0 +1,70 @@
+/*clients*/
+.our-clients {
+    @extend %section;
+}
+.clients {
+    @extend %container;
+}
+.clients__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+}
+.clients__list {
+    @extend %list;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   /* background-color: rgb(146, 130, 238);*/
+}
+.clients__item:not(:first-child) {
+    margin-left: 30px;
+}
+.clients__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+    width: 170px;
+    height: 92px;
+
+    border: 1px;
+    border-style: solid;
+    border-color: $color-icons-items;
+    border-radius: 4px;
+
+    transition-property: border-color;
+    transition-duration: $transdur;
+    transition-timing-function: $transtfunction;
+
+    &:hover,
+    &:focus {
+        border-color: $accent-text-color;
+        fill: $accent-text-color;
+    }
+}
+/*.clients__link:hover,
+.clients__link:focus {
+    border-color: $accent-text-color;
+    fill: $accent-text-color;
+}*/
+
+.clients-logo__icon {
+    transition-property: fill;
+    transition-duration: $transdur;
+    transition-timing-function: $transtfunction;
+}
+.client1,
+.client2,
+.client3,
+.client4,
+.client5,
+.client6 {
+    fill: $color-icons-items;
+}
