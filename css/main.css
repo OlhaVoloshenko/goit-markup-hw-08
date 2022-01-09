@@ -46,12 +46,35 @@ body {
   padding: 94px 0;
 }
 
+@media screen and (min-width: 480px) {
+  .main, .feature, .directions, .team, .our-clients, .footer {
+    padding: 60px 0;
+  }
+}
+
 .header-menu, .feature__box, .directions-box, .team-box, .clients, .footer-contacts {
-  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .header-menu, .feature__box, .directions-box, .team-box, .clients, .footer-contacts {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-menu, .feature__box, .directions-box, .team-box, .clients, .footer-contacts {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-menu, .feature__box, .directions-box, .team-box, .clients, .footer-contacts {
+    width: 1200px;
+  }
 }
 
 /*hide title*/
@@ -266,18 +289,36 @@ body {
 .main__menu {
   display: block;
   text-align: center;
-  padding-bottom: 250px;
-  padding-top: 250px;
+  padding: 118px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .main__menu {
+    padding: 118px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main__menu {
+    padding: 250px 0;
+  }
 }
 
 .main__title {
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.615;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .main__button {
