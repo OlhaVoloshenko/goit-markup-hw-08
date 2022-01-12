@@ -709,6 +709,10 @@ body {
 .feature {
   padding-left: 15px;
   padding-right: 15px;
+  /*@media screen and (min-width: 1200px) {
+        padding-left: 0;
+        padding-right: 0;
+    }*/
 }
 
 .feature__list {
