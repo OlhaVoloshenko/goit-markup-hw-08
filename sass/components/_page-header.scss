@@ -7,6 +7,9 @@
     display: flex;
 }
 .header-menu {
+    position: relative;
+}
+.header-menu {
     @extend %container;
 }
 .header-nav__list,
@@ -14,7 +17,21 @@
     @extend %list;
 }
 .header-nav__logo {
-    width: 145px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    color: $title-text-color;
+
+    @media screen and (min-width: 1200px) {
+        width: 145px;
     margin-left: 0;
     margin-right: 0;
     padding-top: 24px;
@@ -27,15 +44,52 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: $title-text-color;
+    }
 }
 .header-nav__web {
     color: $accent-text-color;
 }
+/*mobile menu*/
+.header-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+}
+.header-button .icon-close {
+    display: none;
+}
+.header-button.is-open .icon-close {
+    display: block;
+}
+.header-button.is-open .icon-menu {
+    display: none;
+}
+.header-window {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: violet;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+
+    &.is-open {
+        display: block;
+    }
+}
+/*mobile menu*/
 .header-nav__list {
     margin-left: 93px;
     padding-top: 32px;
     padding-bottom: 32px;
 }
+
 .header-nav__link {
     font-weight: 500;
     font-size: 14px;
