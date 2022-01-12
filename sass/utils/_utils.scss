@@ -36,16 +36,15 @@ body {
 }
 %section {
     padding: 94px 0;
-    
-@media screen and (max-width: 767px) {
-    padding: 60px 0;
-}
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    }
 }
 %container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
 
 @media screen and (min-width: 480px) {
     width: 480px;
