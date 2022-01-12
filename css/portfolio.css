@@ -43,13 +43,14 @@ body {
 }
 
 .footer, .portfolio {
-  padding: 94px 0;
+  padding: 60px 0;
+  /*padding-top: 60px;
+    padding-bottom: 60px;*/
 }
 
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .footer, .portfolio {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 94px 0;
   }
 }
 
