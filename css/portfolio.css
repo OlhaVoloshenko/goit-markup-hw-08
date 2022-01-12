@@ -450,6 +450,7 @@ body {
   color: #2196F3;
 }
 
+/*mobile menu*/
 .header-button {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -489,6 +490,7 @@ body {
   display: block;
 }
 
+/*mobile menu*/
 .header-nav__list {
   margin-left: 93px;
   padding-top: 32px;
