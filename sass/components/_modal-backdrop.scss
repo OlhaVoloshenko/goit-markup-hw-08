@@ -10,6 +10,9 @@
 
     opacity: 1;
     transition: opacity $transdur $transtfunction;
+/*не дає прокручуватися контенту під модальним вікном*/
+    overflow-y: scroll;
+
 }
 .modal {
     position: absolute;
