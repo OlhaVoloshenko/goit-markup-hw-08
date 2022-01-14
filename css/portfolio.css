@@ -47,9 +47,7 @@ body.modal-open {
 }
 
 .footer, .portfolio {
-  padding: 60px 0;
-  /*padding-top: 60px;
-    padding-bottom: 60px;*/
+  padding: 60px 15px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -418,10 +416,9 @@ body.modal-open {
   display: flex;
 }
 
-.header-menu {
-  position: relative;
-}
-
+/*.header-menu {
+    position: relative;
+}*/
 .header-nav__logo {
   margin-left: 0;
   margin-right: 0;
@@ -469,6 +466,12 @@ body.modal-open {
   background-color: transparent;
 }
 
+@media screen and (min-width: 768px) {
+  .header-button {
+    display: none;
+  }
+}
+
 .header-button .icon-close {
   display: none;
 }
@@ -498,10 +501,18 @@ body.modal-open {
 }
 
 /*mobile menu*/
-.header-nav__list {
-  margin-left: 93px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+@media screen and (max-width: 767px) {
+  .header-nav__list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-nav__list {
+    margin-left: 93px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .header-nav__link {
@@ -521,10 +532,29 @@ body.modal-open {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-contacts {
-  margin-left: auto;
-  padding-top: 32px;
-  padding-bottom: 32px;
+@media screen and (max-width: 767px) {
+  .header-contacts {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-contacts {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin-left: 84px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-contacts {
+    margin-left: auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .header-contacts__item {
@@ -542,8 +572,16 @@ body.modal-open {
           align-items: center;
 }
 
-.header-contacts .header-contacts__item + .header-contacts__item {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .header-contacts__item {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-contacts .header-contacts__item + .header-contacts__item {
+    margin-left: 50px;
+  }
 }
 
 .header-nav__list .header-nav__item + .header-nav__item {
