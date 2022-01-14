@@ -855,11 +855,11 @@ body.modal-open {
 
 @media screen and (min-width: 1200px) {
   .feature__list {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 1200px;
+    /*display: flex;*/
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -872,7 +872,7 @@ body.modal-open {
     }*/
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .feature__item {
     width: 100%;
   }
