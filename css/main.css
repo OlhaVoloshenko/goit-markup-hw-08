@@ -447,8 +447,8 @@ body.open-modal {
 
 @media screen and (min-width: 1200px) {
   .main__menu {
-    padding-bottom: 250px;
-    padding-top: 250px;
+    padding-bottom: 200px;
+    padding-top: 200px;
   }
 }
 
