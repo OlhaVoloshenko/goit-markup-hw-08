@@ -47,7 +47,7 @@ body.open-modal {
 }
 
 .main, .feature, .directions, .team, .our-clients, .footer {
-  /* padding: 60px 0;*/
+  padding: 60px 0;
 }
 
 @media screen and (min-width: 1200px) {
@@ -60,9 +60,8 @@ body.open-modal {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 60px 15px;
-  /* padding-left: 15px;
-    padding-right: 15px;*/
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media screen and (min-width: 480px) {
