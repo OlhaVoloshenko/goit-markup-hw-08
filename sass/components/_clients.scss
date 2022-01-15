@@ -2,16 +2,18 @@
 .our-clients {
     @extend %section;
 
-    @media screen and (max-width: 1199px) {
+    /*@media screen and (max-width: 1199px) {
         margin-left: auto;
         margin-right: auto;
-    }
+    }*/
 }
 .clients {
     @extend %container;
-    width: 100%;
-
-   /* @media screen and (max-width: 1199px) {
+    
+    /*@media screen and (min-width: 768px) {
+        width: 100%;
+    }
+    @media screen and (min-width: 768px) {
         width: 100%;
     }*/
 }
@@ -22,6 +24,9 @@
     text-align: center;
     line-height: 1.17;
 
+    @media screen and (max-width: 480px) {
+        text-align: start;
+    }
     @media screen and (max-width: 1199px) {
         margin-bottom: 30px;
         font-size: 28px;
@@ -40,22 +45,40 @@
     align-items: center;
     justify-content: center;
 
-  /*@media screen and (max-width: 767px) {
-        width: 100%;
-    }*/
-
+    @media screen and (max-width: 479px) {
+        width: 360px;
+        display: block;
+    }
+    @media screen and (max-width: 767px) {
+        max-width: 450px; 
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 738px;
+    }
+    @media screen and (min-width: 1200px) {
+        /*display: flex;*/
+        display: flex;
+        flex-wrap: none; 
+        width: 1200px;
+    }
    /* background-color: rgb(146, 130, 238);*/
-   @media screen and (min-width: 1200px) {
-       display: flex;
-       flex-wrap: none;    
-   }
+   
 }
 .clients__item {
     /*outline: 2px solid violet;*/
     margin-right: 30px;
     margin-bottom: 30px;
    
+    @media screen and (max-width: 479px) {
+        margin-right: 0;
 
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
     @media screen and (max-width: 767px) {
      
         &:nth-last-child(-n+2) {
@@ -64,7 +87,7 @@
         &:nth-child(2n) {
             margin-right: 0;
         }
-}
+    }
     
     @media screen and (min-width: 768px) and (max-width: 1199px) {
        
@@ -75,12 +98,7 @@
             margin-right: 0;
         }
     }
-   /* &:not(:nth-last-child(3n+3)) {
-
-    @media screen and (min-width: 768px) {
-        margin-left: 30px;
-    }
-}*/
+   
     @media screen and (min-width: 1200px) {
         margin: 0;
         &:not(:first-child) {   

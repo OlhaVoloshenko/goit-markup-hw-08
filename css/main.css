@@ -1273,16 +1273,18 @@ body.open-modal {
 }
 
 /*clients*/
-@media screen and (max-width: 1199px) {
-  .our-clients {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.our-clients {
+  /*@media screen and (max-width: 1199px) {
+        margin-left: auto;
+        margin-right: auto;
+    }*/
 }
 
 .clients {
-  width: 100%;
-  /* @media screen and (max-width: 1199px) {
+  /*@media screen and (min-width: 768px) {
+        width: 100%;
+    }
+    @media screen and (min-width: 768px) {
         width: 100%;
     }*/
 }
@@ -1293,6 +1295,12 @@ body.open-modal {
   font-weight: 700;
   text-align: center;
   line-height: 1.17;
+}
+
+@media screen and (max-width: 480px) {
+  .clients__title {
+    text-align: start;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1325,14 +1333,42 @@ body.open-modal {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /*@media screen and (max-width: 767px) {
-        width: 100%;
-    }*/
   /* background-color: rgb(146, 130, 238);*/
+}
+
+@media screen and (max-width: 479px) {
+  .clients__list {
+    width: 360px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .clients__list {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 738px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .clients__list {
+    /*display: flex;*/
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1340,6 +1376,7 @@ body.open-modal {
     -webkit-flex-wrap: none;
         -ms-flex-wrap: none;
             flex-wrap: none;
+    width: 1200px;
   }
 }
 
@@ -1347,12 +1384,15 @@ body.open-modal {
   /*outline: 2px solid violet;*/
   margin-right: 30px;
   margin-bottom: 30px;
-  /* &:not(:nth-last-child(3n+3)) {
+}
 
-    @media screen and (min-width: 768px) {
-        margin-left: 30px;
-    }
-}*/
+@media screen and (max-width: 479px) {
+  .clients__item {
+    margin-right: 0;
+  }
+  .clients__item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
