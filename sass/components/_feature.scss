@@ -1,10 +1,13 @@
 /*feature*/
 .feature {
     @extend %section;
+    padding-left: 15px;
+    padding-right: 15px;
   
 }
 .feature__box {
     @extend %container;
+    
 }
 .feature__list {
     @extend %list;

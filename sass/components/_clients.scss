@@ -10,12 +10,6 @@
 .clients {
     @extend %container;
     
-    /*@media screen and (min-width: 768px) {
-        width: 100%;
-    }
-    @media screen and (min-width: 768px) {
-        width: 100%;
-    }*/
 }
 .clients__title {
     letter-spacing: 0.03em;
@@ -40,17 +34,24 @@
 .clients__list {
     @extend %list;  
     
-    display: inline-flex;
+   /* display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
 
     @media screen and (max-width: 479px) {
-        width: 360px;
-        display: block;
+       width: 320px;
+       
     }
-    @media screen and (max-width: 767px) {
-        max-width: 450px; 
+  /* @media screen and (max-width: 767px) {
+        width: 100%; 
+    }*/
+    @media screen and (min-width: 480px) {
+        width: 100%; 
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
     @media screen and (min-width: 768px) {
         display: flex;
@@ -61,14 +62,14 @@
     @media screen and (min-width: 1200px) {
         /*display: flex;*/
         display: flex;
-        flex-wrap: none; 
+        justify-content: flex-start;
+        flex-wrap: none;
         width: 1200px;
     }
    /* background-color: rgb(146, 130, 238);*/
    
 }
 .clients__item {
-    /*outline: 2px solid violet;*/
     margin-right: 30px;
     margin-bottom: 30px;
    
