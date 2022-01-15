@@ -9,10 +9,11 @@
 }
 .clients {
     @extend %container;
+    width: 100%;
 
-    @media screen and (max-width: 1199px) {
+   /* @media screen and (max-width: 1199px) {
         width: 100%;
-    }
+    }*/
 }
 .clients__title {
     letter-spacing: 0.03em;

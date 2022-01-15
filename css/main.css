@@ -1280,10 +1280,11 @@ body.open-modal {
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .clients {
-    width: 100%;
-  }
+.clients {
+  width: 100%;
+  /* @media screen and (max-width: 1199px) {
+        width: 100%;
+    }*/
 }
 
 .clients__title {
