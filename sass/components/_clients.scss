@@ -2,13 +2,13 @@
 .our-clients {
     @extend %section;
 
-    /*@media screen and (max-width: 1199px) {
-        margin-left: auto;
-        margin-right: auto;
-    }*/
 }
 .clients {
     @extend %container;
+
+    @media screen and (max-width: 479px) {
+        width: 100%;
+    }
     
 }
 .clients__title {
@@ -18,9 +18,9 @@
     text-align: center;
     line-height: 1.17;
 
-    @media screen and (max-width: 480px) {
+   /* @media screen and (max-width: 480px) {
         text-align: start;
-    }
+    }*/
     @media screen and (max-width: 1199px) {
         margin-bottom: 30px;
         font-size: 28px;
@@ -40,8 +40,8 @@
     justify-content: center;*/
 
     @media screen and (max-width: 479px) {
-       width: 320px;
-       
+       width: auto;
+       text-align: center;
     }
   /* @media screen and (max-width: 767px) {
         width: 100%; 
@@ -75,10 +75,7 @@
    
     @media screen and (max-width: 479px) {
         margin-right: 0;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
+        margin-bottom: 0;
     }
     @media screen and (max-width: 767px) {
      
@@ -161,4 +158,24 @@
 .client5,
 .client6 {
     fill: $color-icons-items;
+}
+
+.client1,
+.client2,
+.client3,
+.client4,
+.client5 {
+
+    @media screen and (max-width: 453px) {
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: 454px) and (max-width: 479px){
+        &:nth-last-child(-n+2) {
+            margin-bottom: 30px;
+        }
+        /*&:nth-child(2n+1) {
+            margin-right: 30px;
+        }*/
+    }
+    
 }
