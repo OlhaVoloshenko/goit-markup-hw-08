@@ -851,15 +851,6 @@ body.open-modal {
 
 /*end form for modal*/
 /*feature*/
-.feature {
-  /*padding-left: 15px;
-    padding-right: 15px;*/
-  /*@media screen and (min-width: 1200px) {
-        padding-left: 0;
-        padding-right: 0;
-    }*/
-}
-
 .feature__list {
   margin-left: auto;
   margin-right: auto;
@@ -880,25 +871,19 @@ body.open-modal {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 738px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .feature__list {
     /*display: flex;*/
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    width: 1200px;
   }
-}
-
-.feature__box {
-  /*@media screen and (min-width: 1200px) {
-        width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-    }*/
 }
 
 .feature__item {
