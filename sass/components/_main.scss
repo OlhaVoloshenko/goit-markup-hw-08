@@ -2,9 +2,9 @@
 .main {
     @extend %section;
 
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
-   /* padding: 0;*/
 
     background-position: center;
     background-repeat: no-repeat;
@@ -21,7 +21,8 @@
         url('../images/bcg/header480.png');
     }
     @media screen and (min-width: 768px) {
-        /*max-width: 1600px;*/
+        width: 100%;
+        padding: 0;
         height: 400px;
         
         background-image: 
@@ -30,8 +31,8 @@
         url('../images/bcg/header768.png');
     }
     @media screen and (min-width: 1200px) {
-        
-    width: 1600px;
+    
+    max-width: 1600px;
     height: 600px;
     
     background-image: 
@@ -44,13 +45,15 @@
 .main__menu {
     display: block;
     text-align: center;
-    padding: 118px 0;
+    
 
-@media screen and (min-width: 768px) {
-        padding: 118px 0;
+    @media screen and (max-width: 1199px) {
+       padding-bottom: 118px;
+        padding-top: 118px;
     }
-@media screen and (min-width: 1200px) {
-    padding: 250px 0;
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 250px;
+        padding-top: 250px;
 }
 }
 
@@ -61,12 +64,19 @@
     font-size: 26px;
     line-height: 1.615;
     letter-spacing: 0.06em;
+
+    text-align: center;
+
     text-transform: uppercase;
     color: $background-color;
-
-@media screen and (min-width: 1200px) {
-    font-size: 44px;
-    line-height: 1.36;
+    
+    @media screen and (max-width: 767px) {
+        font-size: 26px;
+        line-height: 1.61;
+        }
+    @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        line-height: 1.36;
     }
 }
 .main__button {
