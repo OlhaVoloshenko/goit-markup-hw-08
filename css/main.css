@@ -1046,9 +1046,11 @@ body.open-modal {
   background-color: #F5F4FA;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .team-box {
     width: 100%;
+    display: inline-block;
+    text-align: center;
   }
 }
 
@@ -1071,21 +1073,23 @@ body.open-modal {
 
 @media screen and (min-width: 1200px) {
   .team-list {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
   }
+}
+
+.team-box__title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+  line-height: 1.17;
+  color: #212121;
 }
 
 @media screen and (max-width: 1199px) {
   .team-box__title {
-    font-weight: 700;
     font-size: 28px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: #212121;
     margin-bottom: 30px;
   }
 }
@@ -1093,13 +1097,57 @@ body.open-modal {
 @media screen and (min-width: 1200px) {
   .team-box__title {
     margin-bottom: 50px;
-    font-weight: 700;
     font-size: 36px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: #212121;
   }
+}
+
+.team-list > .team-list__item {
+  /*width: 100%;*/
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 0px 0px 4px 4px;
+          border-radius: 0px 0px 4px 4px;
+  background-color: #FFFFFF;
+}
+
+@media screen and (max-width: 767px) {
+  .team-list > .team-list__item {
+    max-width: 450px;
+  }
+  .team-list > .team-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-list > .team-list__item {
+    max-width: 354px;
+    width: -webkit-calc((100% - 30px) / 2);
+    width: calc((100% - 30px) / 2);
+  }
+  .team-list > .team-list__item:nth-child(2n) {
+    margin-left: 30px;
+  }
+  .team-list > .team-list__item:nth-child(-n+2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list > .team-list__item {
+    margin-bottom: 0;
+    width: 270px;
+    width: -webkit-calc((100% - 90px) / 4);
+    width: calc((100% - 90px) / 4);
+  }
+  .team-list > .team-list__item:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+.team-list__picture {
+  width: 100%;
+  height: auto;
 }
 
 .team-member__subtitle {
@@ -1128,52 +1176,6 @@ body.open-modal {
     padding-top: 30px;
     padding-bottom: 30px;
 }*/
-.team-list > .team-list__item {
-  width: 100%;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 0px 0px 4px 4px;
-          border-radius: 0px 0px 4px 4px;
-  background-color: #FFFFFF;
-}
-
-@media screen and (max-width: 767px) {
-  .team-list > .team-list__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .team-list > .team-list__item {
-    width: 100%;
-    width: -webkit-calc((100% - 30px) / 2);
-    width: calc((100% - 30px) / 2);
-  }
-  .team-list > .team-list__item:nth-child(2n) {
-    margin-left: 30px;
-  }
-  .team-list > .team-list__item:nth-child(-n+2) {
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team-list > .team-list__item {
-    width: 270px;
-    width: -webkit-calc((100% - 90px) / 4);
-    width: calc((100% - 90px) / 4);
-    margin-bottom: 0;
-  }
-  .team-list > .team-list__item:not(:first-child) {
-    margin-left: 30px;
-  }
-}
-
-.team-list__picture {
-  width: 100%;
-  height: auto;
-}
-
 .team-member__box {
   margin: 24px 0 30px 0;
 }
@@ -1484,7 +1486,7 @@ body.open-modal {
   width: 231px;
 }
 
-.contacts__list {
+.contacts__menu > .contacts__list {
   /*display: block;*/
   font-style: normal;
   font-weight: 400;
@@ -1493,11 +1495,11 @@ body.open-modal {
   letter-spacing: 0.03em;
 }
 
-.contacts__item {
+.contacts__menu > .contacts__item {
   display: block;
 }
 
-.contacts__item:not(:last-child) {
+.contacts__menu > .contacts__item:not(:last-child) {
   margin-bottom: 9px;
 }
 

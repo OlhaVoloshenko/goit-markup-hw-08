@@ -6,9 +6,12 @@
 .team-box {
     @extend %container;
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 767px) {
         width: 100%;
+        display: inline-block;
+text-align: center;
     }
+   
 }
 .team-list {
     @extend %list;
@@ -20,30 +23,61 @@
         flex-wrap: wrap;
     }
     @media screen and (min-width: 1200px) {
-        display: inline-flex;
+        flex-wrap: nowrap;
     }
 }
 .team-box__title {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: center;
+    line-height: 1.17;
+    color: $primary-text-color;
+
     @media screen and (max-width: 1199px) {
-        font-weight: 700;
         font-size: 28px;
-        line-height: 1.17;
-        letter-spacing: 0.03em;
-        text-align: center;
-        color: $primary-text-color;
-  
         margin-bottom: 30px;
     }
     @media screen and (min-width: 1200px) {
         margin-bottom: 50px;
-        font-weight: 700;
         font-size: 36px;
-        line-height: 1.17;
-        letter-spacing: 0.03em;
-        text-align: center;
-        color: $primary-text-color;
     }
-    
+}
+.team-list>.team-list__item {
+    @extend %list;
+    /*width: 100%;*/
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $background-color;
+
+    @media screen and (max-width: 767px) {
+        max-width: 450px;
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        max-width: 354px;
+        width: calc((100% - 30px) / 2);
+        &:nth-child(2n){
+            margin-left: 30px;
+        }
+        &:nth-child(-n+2){
+            margin-bottom: 30px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+        width: 270px;
+        width: calc((100% - 90px) / 4);
+        
+        &:not(:first-child) {
+            margin-left: 30px;
+        }
+    }
+}
+.team-list__picture {
+    width: 100%;
+    height: auto;
 }
 .team-member__subtitle {
     margin-bottom: 10px;
@@ -70,43 +104,9 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }*/
-.team-list>.team-list__item {
-    @extend %list;
-    width: 100%;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-    background-color: $background-color;
 
-    @media screen and (max-width: 767px) {
-        &:not(:last-child) {
-        margin-bottom: 30px;
-        }
-    }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        width: 100%;
-        width: calc((100% - 30px) / 2);
-        &:nth-child(2n){
-            margin-left: 30px;
-        }
-        &:nth-child(-n+2){
-            margin-bottom: 30px;
-        }
-    }
-    @media screen and (min-width: 1200px) {
-        width: 270px;
-        width: calc((100% - 90px) / 4);
-        margin-bottom: 0;
-    
-        &:not(:first-child) {
-            margin-left: 30px;
-        }
-    }
-}
 
-.team-list__picture {
-    width: 100%;
-    height: auto;
-}
+
 
 .team-member__box {
     margin: 24px 0 30px 0;

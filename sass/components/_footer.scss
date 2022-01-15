@@ -36,7 +36,7 @@
     display: inline-block;
     width: 231px;
 }
-.contacts__list {
+.contacts__menu > .contacts__list {
     /*display: block;*/
     font-style: normal;
     font-weight: 400;
@@ -44,11 +44,11 @@
     line-height: 1.71;
     letter-spacing: 0.03em;   
 }
-.contacts__item {
+.contacts__menu > .contacts__item {
+    display: block;
     &:not(:last-child) {
         margin-bottom: 9px;
     }
-    display: block;
 }
 .contacts__mail,
 .contacts__phone {
