@@ -442,6 +442,8 @@ body.open-modal {
   .main__menu {
     padding-bottom: 118px;
     padding-top: 118px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
