@@ -24,8 +24,8 @@
 .header-nav__logo {
     margin-left: 0;
     margin-right: 0;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     font-family: Raleway;
     font-style: normal;
@@ -35,20 +35,19 @@
     letter-spacing: 0.03em;
     color: $title-text-color;
 
+    @media screen and (max-width: 767px) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
     @media screen and (min-width: 1200px) {
         width: 145px;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 24px;
-    padding-bottom: 25px;
+        padding-top: 24px;
+        padding-bottom: 25px;
 
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: $title-text-color;
+        font-size: 26px;
+        line-height: 1.19;
+        letter-spacing: 0.03em;
+        color: $title-text-color;
     }
 }
 .header-nav__web {
@@ -97,18 +96,21 @@
 }
 /*mobile menu*/
 .header-nav__list {
+    margin-left: 93px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     @media screen and (max-width: 767px) {
         display: none;
     }
     @media screen and (min-width: 768px) {
-    
+        
     }
-    @media screen and (min-width: 1200px) {
+   /* @media screen and (min-width: 1200px) {
         margin-left: 93px;
         padding-top: 32px;
         padding-bottom: 32px;
-    }
+    }*/
 }
 
 .header-nav__link {

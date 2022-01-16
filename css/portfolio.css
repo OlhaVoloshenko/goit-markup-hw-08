@@ -484,8 +484,8 @@ body.open-modal {
 .header-nav__logo {
   margin-left: 0;
   margin-right: 0;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-family: Raleway;
   font-style: normal;
   font-weight: 700;
@@ -495,16 +495,18 @@ body.open-modal {
   color: #000000;
 }
 
+@media screen and (max-width: 767px) {
+  .header-nav__logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .header-nav__logo {
     width: 145px;
-    margin-left: 0;
-    margin-right: 0;
     padding-top: 24px;
     padding-bottom: 25px;
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
@@ -565,17 +567,20 @@ body.open-modal {
 }
 
 /*mobile menu*/
+.header-nav__list {
+  margin-left: 93px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* @media screen and (min-width: 1200px) {
+        margin-left: 93px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }*/
+}
+
 @media screen and (max-width: 767px) {
   .header-nav__list {
     display: none;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header-nav__list {
-    margin-left: 93px;
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 }
 
