@@ -14,7 +14,8 @@
   <body>
     <header class="header">
       <div class="header-menu container">
-        <a class="header-nav__logo" href="./index.html"><span class="header-nav__web">Web</span>Studio</a>
+        <nav class="header-nav">
+          <a class="header-nav__logo" href="./index.html"><span class="header-nav__web">Web</span>Studio</a>
           
             <button type="button" class="header-button" aria-expanded="false" aria-controls="header-window" data-menu-button>
               <svg width="40" height="40" aria-label="Перемикач мобільного меню">
@@ -22,8 +23,6 @@
                 <use class="icon-menu" href="./images/symbol-defs.svg#menu-mobile"></use>
               </svg>
             </button>
-        <nav class="header-nav">
-          
             <div class="header-window" id="header-window" data-menu>
               <div class="header-navigation">
               <ul class="header-nav__list list">
@@ -36,7 +35,7 @@
               </ul>
             </div>
             <div class="header-contacts">
-              <ul class="header-contacts list">
+              <ul class="header-contacts__menu list">
                 <li class="header-contacts__item">
                   <a class="header-contacts__mail mail__size" aria-label="mail" href="mailto:info@devstudio.com">info@devstudio.com
                   <svg class="header-contacts__icon" width="16" height="12">
