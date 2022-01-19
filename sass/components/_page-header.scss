@@ -4,11 +4,11 @@
 .header-nav__list,
 .header-contacts {
     
-    display: flex;
+    @media screen and (min-width:768px) {
+        display: flex;
+    }
+    
 }
-/*.header-menu {
-    position: relative;
-}*/
 .header-menu {
     @extend %container;
     padding: 0 15px;
@@ -96,6 +96,7 @@
     }
 }*/
 /*mobile menu*/
+
 /*mobile menu*/
 .header-button {
     display: inline-flex;
@@ -120,13 +121,10 @@
     display: none;
 }
 .header-window {
-    
+    /*display: none;*/
 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: violet;
+   
+    background-color: $background-color;
     padding-top: 48px;
     padding-bottom: 48px;
     text-align: center;
@@ -137,16 +135,27 @@
     }
     @media screen and (max-width: 767px) {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        
+        margin-left: 93px;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 /*mobile menu*/
-.header-nav__list {
+/*.header-nav__list {
     margin-left: 93px;
     padding-top: 32px;
     padding-bottom: 32px;
 
     @media screen and (max-width: 767px) {
-        display: none;
+        
     }
     @media screen and (min-width: 768px) {
         
@@ -155,8 +164,8 @@
         margin-left: 93px;
         padding-top: 32px;
         padding-bottom: 32px;
-    }*/
-}
+    }
+}*/
 
 .header-nav__link {
     font-weight: 500;
@@ -171,33 +180,35 @@
 }
 .header-contacts  {
 
-    @media screen and (max-width: 767px) {
+    /*@media screen and (max-width: 767px) {
         display: none;
-    }
+    }*/
 
     @media screen and (min-width: 768px) {
         flex-wrap: wrap;
 
-        padding-top: 21px;
-        padding-bottom: 21px;
+        /*padding-top: 21px;
+        padding-bottom: 21px;*/
         margin-left: 84px;
     }
     @media screen and (min-width: 1200px) {
         margin-left: auto;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        flex-wrap: nowrap;
+        /*padding-top: 32px;
+        padding-bottom: 32px;*/
     }
    
 }
 .header-contacts__item {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    
 
     @media screen and (min-width: 1200px) {
         margin: 0;
     }
     @media screen and (min-width: 1200px) {
+        display: inline-flex;
+    justify-content: center;
+    align-items: center;
         .header-contacts & + & {
             margin-left: 50px;
         }
@@ -259,5 +270,11 @@
     .header-contacts__mail:hover &,
     .header-contacts__mail:focus & {
         fill: $accent-text-color;
+    }
+}
+
+.header-social {
+    @media screen and (min-width: 768px) {
+        display: none;
     }
 }

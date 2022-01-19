@@ -456,19 +456,18 @@ body.open-modal {
 
 /*end form for modal*/
 /*Header*/
-.header-menu,
-.header-nav,
-.header-nav__list,
-.header-contacts {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .header-menu,
+  .header-nav,
+  .header-nav__list,
+  .header-contacts {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
-/*.header-menu {
-    position: relative;
-}*/
 .header-menu {
   padding: 0 15px;
   position: relative;
@@ -591,11 +590,8 @@ body.open-modal {
 }
 
 .header-window {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: violet;
+  /*display: none;*/
+  background-color: #FFFFFF;
   padding-top: 48px;
   padding-bottom: 48px;
   text-align: center;
@@ -609,27 +605,43 @@ body.open-modal {
 @media screen and (max-width: 767px) {
   .header-window {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-window {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 93px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
 /*mobile menu*/
-.header-nav__list {
-  margin-left: 93px;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  /* @media screen and (min-width: 1200px) {
+/*.header-nav__list {
+    margin-left: 93px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @media screen and (max-width: 767px) {
+        
+    }
+    @media screen and (min-width: 768px) {
+        
+    }
+   /* @media screen and (min-width: 1200px) {
         margin-left: 93px;
         padding-top: 32px;
         padding-bottom: 32px;
-    }*/
-}
-
-@media screen and (max-width: 767px) {
-  .header-nav__list {
-    display: none;
-  }
-}
-
+    }
+}*/
 .header-nav__link {
   font-weight: 500;
   font-size: 14px;
@@ -647,10 +659,10 @@ body.open-modal {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 767px) {
-  .header-contacts {
-    display: none;
-  }
+.header-contacts {
+  /*@media screen and (max-width: 767px) {
+        display: none;
+    }*/
 }
 
 @media screen and (min-width: 768px) {
@@ -658,8 +670,8 @@ body.open-modal {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    padding-top: 21px;
-    padding-bottom: 21px;
+    /*padding-top: 21px;
+        padding-bottom: 21px;*/
     margin-left: 84px;
   }
 }
@@ -667,24 +679,12 @@ body.open-modal {
 @media screen and (min-width: 1200px) {
   .header-contacts {
     margin-left: auto;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    /*padding-top: 32px;
+        padding-bottom: 32px;*/
   }
-}
-
-.header-contacts__item {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -694,6 +694,20 @@ body.open-modal {
 }
 
 @media screen and (min-width: 1200px) {
+  .header-contacts__item {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .header-contacts .header-contacts__item + .header-contacts__item {
     margin-left: 50px;
   }
@@ -780,6 +794,12 @@ body.open-modal {
 .header-contacts__mail:hover .header-contacts__icon,
 .header-contacts__mail:focus .header-contacts__icon {
   fill: #2196F3;
+}
+
+@media screen and (min-width: 768px) {
+  .header-social {
+    display: none;
+  }
 }
 
 /*footer*/
