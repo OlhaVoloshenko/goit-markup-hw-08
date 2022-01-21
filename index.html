@@ -14,7 +14,7 @@
   <body>
     <header class="header">
       <div class="header-menu container">
-        <nav class="header-nav">
+        
           <a class="header-nav__logo" href="./index.html"><span class="header-nav__web">Web</span>Studio</a>
           
             <button type="button" class="header-button" aria-expanded="false" aria-controls="header-window" data-menu-button>
@@ -23,17 +23,19 @@
                 <use class="icon-menu" href="./images/symbol-defs.svg#menu-mobile"></use>
               </svg>
             </button>
-            <div class="header-window" id="header-window" data-menu>
+          <div class="header-window" id="header-window" data-menu>
+            <nav class="header-nav">
               <div class="header-navigation">
-              <ul class="header-nav__list list">
-                <li class="header-nav__item">
-                  <a class="header-nav__link header-nav--current" href="./index.html">Студія</a></li>
-                <li class="header-nav__item">
-                  <a class="header-nav__link" href="./portfolio.html">Портфоліо</a></li>
-                <li class="header-nav__item">
-                  <a class="header-nav__link" href="/">Контакти</a></li>
-              </ul>
-            </div>
+                <ul class="header-nav__list list">
+                  <li class="header-nav__item">
+                    <a class="header-nav__link header-nav--current" href="./index.html">Студія</a></li>
+                  <li class="header-nav__item">
+                    <a class="header-nav__link" href="./portfolio.html">Портфоліо</a></li>
+                  <li class="header-nav__item">
+                    <a class="header-nav__link" href="/">Контакти</a></li>
+                </ul>
+              </div>
+            </nav>
             <div class="header-contacts">
               <ul class="header-contacts__menu list">
                 <li class="header-contacts__item">
@@ -65,7 +67,7 @@
                 </ul>
               </div>
             </div>
-          </nav>
+          
       </div>
     </header>
     <!--<header class="header">
