@@ -32,8 +32,8 @@
     }
     @media screen and (min-width: 1200px) {
         width: 145px;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        padding-top: 24px;
+        padding-bottom: 25px;
 
         font-size: 26px;
         line-height: 1.19;
@@ -85,22 +85,27 @@
 
         background: #FFFFFF;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+        
+        transform: translateY(-100%);
+
+        transition: transform $transdur $transtfunction;
 
         &.is-open {
             display: block;
+            transform: translateY(0);
         }
     }
     @media screen and (min-width: 768px) {
         display: flex;
         
         margin-left: 93px;
-        padding-top: 21px;
-        padding-bottom: 21px;
+       /* padding-top: 21px;
+        padding-bottom: 21px;*/
     }
     @media screen and (min-width: 1200px) {
     
-        padding-top: 32px;
-        padding-bottom: 32px;
+        /*padding-top: 32px;
+        padding-bottom: 32px;*/
     }
 }
 
@@ -108,7 +113,14 @@
 .header-navigation {
     @media screen and (max-width: 767px) {
         margin-bottom: 302px;
-    }   
+    }
+    @media screen and (min-width: 768px) {
+       
+    padding-top: 32px;
+    margin-bottom: 32px;
+    }
+    
+
 }
 .header-nav__list {
     @media screen and (min-width:768px) {
@@ -151,17 +163,32 @@
 }
 /*Header contacts*/
 .header-contacts  {
+
+
+    @media screen and (max-width: 767px) {
+       
+        padding-bottom: 64px;
+    }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         margin-left: 84px;
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+    @media screen and (min-width: 1200px) {
+        text-align: center;
+        justify-content: center;
+        display: flex;
     }
 }
 
 .header-contacts__menu {
     /*@extend %list;*/
-    display: inline-grid;
-
+   
+    display: flex;
+    @media screen and (max-width: 767px) {
+        flex-direction: column-reverse;
+    }
     @media screen and (min-width: 768px) {
-        display: flex;
         flex-wrap: wrap;
     }
     @media screen and (min-width: 1200px) {
@@ -170,11 +197,15 @@
     } 
 }
 .header-contacts__item {
-
     
     @media screen and (max-width: 767px) {
-        &:not(:last-child) {
+        &:not(:first-child) {
             margin-bottom: 32px;
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        &:not(:last-child) {
+            margin-bottom: 10px;
         }
     }
     @media screen and (min-width: 1200px) {
@@ -189,30 +220,47 @@
 }
 .header-contacts__mail,
 .header-contacts__phone {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row-reverse;
-    
+
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
     letter-spacing: 0.02em;
     color: $page-text-color;
 
     transition-property: $transcolor;
     transition-duration: $transdur;
     transition-timing-function: $transtfunction;
-    
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;
+        
+        font-size: 12px;
+        line-height: 1.16;
+    }
+    @media screen and (min-width: 1200px) {        
+        font-size: 14px;
+        line-height: 1.14;
+        }
     &:hover, &:focus {
         color: $accent-text-color;
     }
 }
 .mail__size {
     min-width: 135px;
+    @media screen and (max-width: 767px) {
+        font-size: 24px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+    }
 }
 .phone__size {
     min-width: 122px;
+    @media screen and (max-width: 767px) {
+        font-size: 34px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+    }
 }
 .header-contacts__icon {
     display: none;
@@ -228,6 +276,26 @@
     transition-timing-function: $transtfunction;
     }
     
+}
+
+/*Header Social*/
+.header-social__item {
+    
+}
+.header-social__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $page-text-color;
+
+    &:hover, &:focus {
+        color: $accent-text-color;
+    }
+    transition: $transcolor $transdur $transtfunction;
+}
+.header-social__item:not(:first-child) {
+    margin-left: 20px;
 }
 
 
