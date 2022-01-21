@@ -56,6 +56,12 @@
     background-color: transparent;
 
     margin: 10px 0 10px auto;
+        
+    transition: $transfill $transdur $transtfunction;
+
+     &:focus {
+        fill: $accent-text-color;
+    }
 
     @media screen and (min-width: 768px) {
         display: none;
@@ -280,12 +286,16 @@
 
 /*Header Social*/
 .header-social__item {
-    
+     &:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        
+    }
 }
 .header-social__link {
     font-weight: 500;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.22;
     letter-spacing: 0.02em;
     color: $page-text-color;
 
@@ -293,9 +303,11 @@
         color: $accent-text-color;
     }
     transition: $transcolor $transdur $transtfunction;
+
+    
 }
 .header-social__item:not(:first-child) {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 
