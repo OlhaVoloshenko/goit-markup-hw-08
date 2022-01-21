@@ -49,7 +49,7 @@
 /*mobile menu*/
 .header-button {
     display: inline-flex;
-    z-index: 1;
+    z-index: 2;
     margin: 0;
     padding: 0;
     border: none;
@@ -79,6 +79,7 @@
 }
 .header-window {
     background-color: $background-color;
+    z-index: 1;
    
     @media screen and (max-width: 767px) {
         display: none;

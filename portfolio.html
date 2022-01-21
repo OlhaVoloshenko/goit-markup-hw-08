@@ -14,52 +14,66 @@
   <body>
     <header class="header">
       <div class="header-menu container">
-        <nav class="header-nav">
+        
           <a class="header-nav__logo" href="./index.html"><span class="header-nav__web">Web</span>Studio</a>
           
-            <ul class="header-nav__list list">
-              <li class="header-nav__item">
-                <a class="header-nav__link " href="./index.html">Студія</a></li>
-              <li class="header-nav__item">
-                <a class="header-nav__link header-nav--current" href="./portfolio.html">Портфоліо</a></li>
-              <li class="header-nav__item">
-                <a class="header-nav__link" href="/">Контакти</a></li>
-            </ul>
-            
-        </nav>
-            <ul class="header-contacts list">
-              <li class="header-contacts__item">
-                <a class="header-contacts__mail mail__size" aria-label="mail" href="mailto:info@devstudio.com">info@devstudio.com
-                <svg class="header-contacts__icon" width="16" height="12">
-                  <use href="./images/symbol-defs.svg#envelope"></use>
-                </svg>
-              </a>
-                </li>
-              <li class="header-contacts__item">
-                <a class="header-contacts__phone phone__size" aria-label="smartphone" href="tel:+380961111111">+38 096 111 11 11
-                <svg class="header-contacts__icon" width="10" height="16">
-                  <use href="./images/symbol-defs.svg#smartphone"></use>
-                </svg>
-              </a>
-                </li>
-            </ul>
             <button type="button" class="header-button" aria-expanded="false" aria-controls="header-window" data-menu-button>
               <svg width="40" height="40" aria-label="Перемикач мобільного меню">
                 <use class="icon-close" href="./images/symbol-defs.svg#close-mobile"></use>
                 <use class="icon-menu" href="./images/symbol-defs.svg#menu-mobile"></use>
-                
               </svg>
             </button>
-            <div class="header-window" id="header-window" data-menu>
-             
-              111111
+          <div class="header-window" id="header-window" data-menu>
+            <nav class="header-nav">
+              <div class="header-navigation">
+                <ul class="header-nav__list list">
+                  <li class="header-nav__item">
+                    <a class="header-nav__link" href="./index.html">Студія</a></li>
+                  <li class="header-nav__item">
+                    <a class="header-nav__link header-nav--current" href="./portfolio.html">Портфоліо</a></li>
+                  <li class="header-nav__item">
+                    <a class="header-nav__link" href="/">Контакти</a></li>
+                </ul>
+              </div>
+            </nav>
+            <div class="header-contacts">
+              <ul class="header-contacts__menu list">
+                <li class="header-contacts__item">
+                  <a class="header-contacts__mail mail__size" aria-label="mail" href="mailto:info@devstudio.com">info@devstudio.com
+                  <svg class="header-contacts__icon" width="16" height="12">
+                    <use href="./images/symbol-defs.svg#envelope"></use>
+                  </svg>
+                </a>
+                </li>
+                <li class="header-contacts__item">
+                  <a class="header-contacts__phone phone__size" aria-label="smartphone" href="tel:+380961111111">+38 096 111 11 11
+                  <svg class="header-contacts__icon" width="10" height="16">
+                    <use href="./images/symbol-defs.svg#smartphone"></use>
+                  </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
+            <div class="header-social">
+              <ul class="header-social__menu list">
+                <li class="header-social__item aria-label="Linkedin">
+                  <a class="header-social__link" href="/">Linkedin</a></li>
+                <li class="header-social__item aria-label="Facebook">
+                  <a class="header-social__link" href="/">Facebook</a></li>
+                <li class="header-social__item aria-label="Twitter">
+                  <a class="header-social__link" href="/">Twitter</a></li>
+                <li class="header-social__item aria-label="Instagram">
+                  <a class="header-social__link" href="/">Instagram</a></li>
+                </ul>
+              </div>
+            </div>
+          
       </div>
     </header>
     <main>
     <section class="portfolio section">
       <h1 class="portfolio__title section-title">Наші розробки та проекти</h1>
-        <ul class="portfolio-menu">
+        <ul class="portfolio-menu container">
           <li class="portfolio-menu__item"><button type="button" class="portfolio-menu__button one">Усе</button></li>
           <li class="portfolio-menu__item"><button type="button" class="portfolio-menu__button two">Веб-сайти</button></li>
           <li class="portfolio-menu__item"><button type="button" class="portfolio-menu__button three">Додатки</button></li>
@@ -207,6 +221,7 @@
     </main>
     <footer class="footer section">
       <div class="footer-contacts container">
+        <div class="footer-wrapper">
         <div class="contacts-box">
           <a class="contacts-box__logo" href="./index.html"><span class="contacts-box__web">Web</span>Studio</a>
           <address class="contacts">
@@ -252,11 +267,13 @@
             </li>
           </ul>
         </div>
+      </div>
         <div class="subscribe">
           <span class="subscribe__title">Підпишіться на розсилку</span>
           <form class="subscribe-form form" autocomplete="off">
           <label class="subscribe-field">
             <input type="email" class="subscribe-field__input" name="mail" placeholder="E-mail" required>
+            
           </label>
           <button type="submit" class="subscribe-field__submit">
             Підписатися
@@ -284,5 +301,6 @@
             });
         })();
       </script>
+      <script src="./js/menu.js"></script>
   </body>
 </html>

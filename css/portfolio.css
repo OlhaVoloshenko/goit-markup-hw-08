@@ -49,8 +49,7 @@ body.open-modal {
   }
 }
 
-.header-menu, .footer-contacts, .header__menu, .container-list {
-  width: 1200px;
+.header-menu, .footer-contacts, .portfolio-menu, .container-list {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -58,19 +57,19 @@ body.open-modal {
 }
 
 @media screen and (min-width: 480px) {
-  .header-menu, .footer-contacts, .header__menu, .container-list {
+  .header-menu, .footer-contacts, .portfolio-menu, .container-list {
     width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .header-menu, .footer-contacts, .header__menu, .container-list {
+  .header-menu, .footer-contacts, .portfolio-menu, .container-list {
     width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .header-menu, .footer-contacts, .header__menu, .container-list {
+  .header-menu, .footer-contacts, .portfolio-menu, .container-list {
     width: 1200px;
   }
 }
@@ -515,7 +514,7 @@ body.open-modal {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  z-index: 1;
+  z-index: 2;
   margin: 0;
   padding: 0;
   border: none;
@@ -550,6 +549,7 @@ body.open-modal {
 
 .header-window {
   background-color: #FFFFFF;
+  z-index: 1;
 }
 
 @media screen and (max-width: 767px) {
@@ -929,7 +929,8 @@ body.open-modal {
   .footer-contacts {
     padding-left: 0;
     padding-right: 0;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1292,7 +1293,8 @@ body.open-modal {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.6);
   outline: transparent;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   margin-bottom: 20px;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1389,14 +1391,14 @@ body.open-modal {
   border-bottom: 1px solid #ECECEC;
 }
 
-.header__menu {
+.portfolio-menu {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.portfolio-menu {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   margin-bottom: 40px;
   font-weight: 500;
   font-size: 16px;
@@ -1406,16 +1408,17 @@ body.open-modal {
   color: #212121;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .portfolio-menu {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-menu {
     margin-bottom: 50px;
   }
 }
@@ -1428,6 +1431,10 @@ body.open-modal {
   margin-left: 0;
 }
 
+.portfolio-menu__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .portfolio-menu__button {
   font-style: normal;
   font-weight: 500;
@@ -1437,8 +1444,7 @@ body.open-modal {
   letter-spacing: 0.03em;
   padding: 6px 22px;
   color: #212121;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
+  border: none;
   border-style: solid;
   border-color: #F5F4FA;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1452,15 +1458,12 @@ body.open-modal {
   -o-transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: -webkit-border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /*transition: border-radius 250ms $transtfunction;*/
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  border: none;
 }
 
 .portfolio-menu__button:hover, .portfolio-menu__button:focus {
@@ -1468,12 +1471,13 @@ body.open-modal {
   background-color: #2196F3;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
-  border-color: #2196F3;
 }
 
-@media screen and (min-width: 1200px) {
+.container-list {
+  /*width: 100%;*/
+}
+
+@media screen and (min-width: 768px) {
   .container-list {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1486,7 +1490,6 @@ body.open-modal {
 }
 
 .container-list__item {
-  margin-bottom: 30px;
   -webkit-transition-property: background-color;
   -o-transition-property: background-color;
   transition-property: background-color;
@@ -1510,10 +1513,36 @@ body.open-modal {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+@media screen and (max-width: 767px) {
+  .container-list__item {
+    width: 100%;
+    max-width: 450px;
+  }
+  .container-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container-list__item {
+    width: -webkit-calc((100% - 30px) / 2);
+    width: calc((100% - 30px) / 2);
+    max-width: 354px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .container-list__item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .container-list__item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .container-list__item {
-    width: -webkit-calc((100% - 60px)/3);
-    width: calc((100% - 60px)/3);
+    width: -webkit-calc((100% - 60px) / 3);
+    width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
   }
