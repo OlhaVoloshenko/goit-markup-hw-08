@@ -4,13 +4,13 @@
 .header-menu {
     display: flex;
     @extend %container;
-    padding: 0;
+    padding: 0 15px;
     position: relative;
 
     @media screen and (max-width: 767px) {
         width: 100%;
-        padding-left: 15px;
-        padding-right: 15px;
+       /* padding-left: 15px;
+        padding-right: 15px;*/
     }
 }
 .header-nav__logo {

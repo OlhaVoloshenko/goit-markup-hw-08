@@ -119,15 +119,15 @@ body.open-modal {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0;
+  padding: 0 15px;
   position: relative;
 }
 
 @media screen and (max-width: 767px) {
   .header-menu {
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    /* padding-left: 15px;
+        padding-right: 15px;*/
   }
 }
 
