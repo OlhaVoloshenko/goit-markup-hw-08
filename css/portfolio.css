@@ -1140,7 +1140,10 @@ body.open-modal {
 }
 
 .social-box {
-  /*display: flex;*/
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
