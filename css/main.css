@@ -1063,8 +1063,8 @@ body.open-modal {
 /*end form for modal*/
 /*feature*/
 .feature {
-  padding-left: 15px;
-  padding-right: 15px;
+  /* padding-left: 15px;
+    padding-right: 15px;*/
 }
 
 .feature__list {
@@ -1097,8 +1097,15 @@ body.open-modal {
 
 @media screen and (min-width: 1200px) {
   .feature__list {
-    /*display: flex;*/
-    width: 1200px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
   }
 }
 
