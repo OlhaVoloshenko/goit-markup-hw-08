@@ -504,11 +504,45 @@ body.open-modal {
 
 .header-contacts__icon {
   display: none;
+  /* @media screen and (min-width: 768px) {
+        display: inline-block;
+        margin-right: 10px;
+
+    fill: $page-text-color;
+
+    transition-property: $transfill;
+    transition-duration: $transdur;
+    transition-timing-function: $transtfunction;
+    }*/
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .header-contacts__icon {
     display: inline-block;
+    margin-right: 10px;
+    fill: #757575;
+    -webkit-transition-property: fill;
+    -o-transition-property: fill;
+    transition-property: fill;
+    -webkit-transition-duration: 250ms;
+         -o-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+         -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.header-contacts__icon-tabl {
+  display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-contacts__icon-tabl {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     margin-right: 10px;
     fill: #757575;
     -webkit-transition-property: fill;
