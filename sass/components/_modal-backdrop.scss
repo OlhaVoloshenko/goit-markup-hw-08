@@ -15,10 +15,12 @@
 
 }
 .modal {
-
-    top: 85%;
-    left: 50%;
+    position: absolute;
+    max-width: 450px;
+    width: 100%;
     padding: 40px;
+    top: 50%;
+    left: 50%;
     
     background-color: $background-color;
 
@@ -29,32 +31,17 @@
 
     transform: translate(-50%, -50%) scale(1);
     transition: transform $transdur $transtfunction;
-
-    width: 100%;
-
-    position: absolute;
-    max-width: 450px;
-        height: 609px;
+        
     @media screen and (max-width: 767px) {
-        /*max-width: 450px;
-        height: 609px;*/
-        transform: translate(-50%, -65%)
+        transform: translate(-50%, -65%);
     }
 
-    @media screen and (max-width: 1199px) {
-        /*position: absolute;  */   
-    
-       /* max-width: 450px;
-        height: 609px;*/
-    
+    @media screen and (min-width: 768px) {
+        transform: translate(-50%, -50%);
     }
 
     @media screen and (min-width: 1200px) {
-        /*position: absolute;*/
-        
-        transform: translate(-50%, -50%);
-
-        width: 528px;
+        max-width: 528px;
         min-height: 581px;    
 }
 }

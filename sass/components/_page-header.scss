@@ -77,13 +77,16 @@
 .header-button.is-open .icon-menu {
     display: none;
 }
+.header-window.open-modal {
+    overflow: hidden;
+}
 .header-window {
     background-color: $background-color;
     z-index: 1;
    
     @media screen and (max-width: 767px) {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
