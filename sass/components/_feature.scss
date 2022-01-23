@@ -1,35 +1,31 @@
 /*feature*/
 .feature {
     @extend %section;
-   /* padding-left: 15px;
-    padding-right: 15px;*/
   
 }
 .feature__box {
     @extend %container;
-    
 }
 .feature__list {
     @extend %list;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
 
     @media screen and (max-width: 767px) {
-        max-width: 450px;
         
+        max-width: 450px;
     }
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 738px;
+        max-width: 768px;
     }
     @media screen and (min-width: 1200px) {
-        margin: 0;
-        padding-left: 0;
-        padding-right: 0;
-        display: flex;
-        width: 100%;
+        
         max-width: 1200px;
     }
 }
