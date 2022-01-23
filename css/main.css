@@ -236,7 +236,19 @@ body.open-modal {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .header-window.is-open {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
@@ -250,23 +262,14 @@ body.open-modal {
     display: -ms-flexbox;
     display: flex;
     margin-left: 93px;
-    /* padding-top: 21px;
-        padding-bottom: 21px;*/
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header-window {
-    /*padding-top: 32px;
-        padding-bottom: 32px;*/
   }
 }
 
 /*header-navigation*/
-@media screen and (max-width: 767px) {
-  .header-navigation {
-    margin-bottom: 302px;
-  }
+.header-navigation {
+  /* @media screen and (max-width: 767px) {
+        margin-bottom: 302px;
+    }*/
 }
 
 @media screen and (min-width: 768px) {
@@ -499,6 +502,7 @@ body.open-modal {
     font-size: 34px;
     line-height: 1.17;
     letter-spacing: 0.02em;
+    color: #2196F3;
   }
 }
 
@@ -568,7 +572,7 @@ body.open-modal {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: #2196F3;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -770,7 +774,7 @@ body.open-modal {
 }
 
 .modal {
-  top: 50%;
+  top: 85%;
   left: 50%;
   padding: 40px;
   background-color: #FFFFFF;
@@ -787,12 +791,16 @@ body.open-modal {
   -o-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  position: absolute;
+  max-width: 450px;
+  height: 609px;
 }
 
 @media screen and (max-width: 767px) {
   .modal {
-    width: 450px;
-    height: 609px;
+    /*max-width: 450px;
+        height: 609px;*/
     -webkit-transform: translate(-50%, -65%);
         -ms-transform: translate(-50%, -65%);
             transform: translate(-50%, -65%);
@@ -801,16 +809,18 @@ body.open-modal {
 
 @media screen and (max-width: 1199px) {
   .modal {
-    position: absolute;
-    width: 450px;
-    height: 609px;
+    /*position: absolute;  */
+    /* max-width: 450px;
+        height: 609px;*/
   }
 }
 
 @media screen and (min-width: 1200px) {
   .modal {
-    position: absolute;
-    /*transform: translate(-50%, -50%);*/
+    /*position: absolute;*/
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 528px;
     min-height: 581px;
   }
@@ -2219,11 +2229,13 @@ body.open-modal {
   text-align: center;
   padding: 10px 28px;
   min-width: 200px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: #2196F3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 4px;
           border-radius: 4px;
+  color: #FFFFFF;
+  border: 1px solid #2196F3;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;

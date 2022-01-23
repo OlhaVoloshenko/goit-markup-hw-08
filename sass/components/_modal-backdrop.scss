@@ -16,7 +16,7 @@
 }
 .modal {
 
-    top: 50%;
+    top: 85%;
     left: 50%;
     padding: 40px;
     
@@ -30,24 +30,29 @@
     transform: translate(-50%, -50%) scale(1);
     transition: transform $transdur $transtfunction;
 
-    @media screen and (max-width: 767px) {
-        width: 450px;
+    width: 100%;
+
+    position: absolute;
+    max-width: 450px;
         height: 609px;
+    @media screen and (max-width: 767px) {
+        /*max-width: 450px;
+        height: 609px;*/
         transform: translate(-50%, -65%)
     }
 
     @media screen and (max-width: 1199px) {
-        position: absolute;     
+        /*position: absolute;  */   
     
-        width: 450px;
-        height: 609px;
+       /* max-width: 450px;
+        height: 609px;*/
     
     }
 
     @media screen and (min-width: 1200px) {
-        position: absolute;
+        /*position: absolute;*/
         
-        /*transform: translate(-50%, -50%);*/
+        transform: translate(-50%, -50%);
 
         width: 528px;
         min-height: 581px;    
