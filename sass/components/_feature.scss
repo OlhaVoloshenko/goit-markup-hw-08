@@ -7,7 +7,7 @@
     @extend %container;
 }
 .feature__list {
-    @extend %list;
+   /* @extend %list;*/
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
@@ -48,7 +48,9 @@
         }
     }
     @media screen and (min-width: 1200px) {
-         width: calc((100% - 8 * 15px) / 4);
+         /*width: calc((100% - 8 * 15px) / 4);*/
+         width: 100%;
+         max-width: 270px;
          margin-bottom: 0;
 
         &:not(:first-child) {
